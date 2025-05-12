@@ -38,5 +38,8 @@ STUDENT_TEST("Filter names") {
     results = filter("Szumlanski,Rodriguez Cardenas", "AaS");
     EXPECT_EQUAL(results, {});
 
+    results = filter("Andrews,Smith,Matthews,White", "ews");
+    EXPECT_EQUAL(results, {"Andrews", "Matthews"});
+
     // what other tests could you add?
 }
